@@ -45,3 +45,8 @@ A beautiful, interactive weather dashboard that provides real-time weather data 
 1. Clone the repository:
 ```bash
 git clone https://github.com/YOUR-USERNAME/skyfetch-weather-dashboard.git
+
+## Part 4 Completed
+- Added local storage
+- Added recent searches
+- Added clear history feature
