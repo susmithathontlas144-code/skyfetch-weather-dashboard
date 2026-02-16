@@ -190,3 +190,112 @@ h1 {
   font-family: sans-serif;
   color: #333;
 }
+
+/* Forecast section styling */
+.forecast-section {
+  margin-top: 30px;            /* space above the section */
+  padding-top: 30px;           /* space inside from the top */
+  border-top: 2px solid #eee;  /* light separator line */
+}
+
+/* Forecast title styling */
+.forecast-title {
+  font-size: 1.5rem;           /* larger heading size */
+  color: #333;                 /* dark grey text */
+  margin-bottom: 20px;         /* space below the title */
+  text-align: center;           /* or use 'left' if preferred */
+  font-weight: 600;             /* optional: slightly bolder */
+}
+
+/* Forecast container */
+.forecast-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* responsive columns */
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Forecast card */
+.forecast-card {
+  background: linear-gradient(135deg, #667eea, #764ba2); /* gradient background */
+  color: #fff; /* text color */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* optional: indicates interactivity */
+}
+
+/* Hover effect for forecast card */
+.forecast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Day name in forecast cards */
+.forecast-card h4,
+.forecast-day {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Forecast temperature */
+.forecast-card .temperature {
+  font-size: 1.8rem;
+  color: #667eea; /* matches theme */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Forecast description */
+.forecast-card .description {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: capitalize;
+}
+
+/* Forecast icons */
+.forecast-card .icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* keeps aspect ratio */
+  margin-bottom: 10px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  /* Adjust forecast grid for smaller screens */
+  .forecast-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* or use repeat(2, 1fr) for exactly 2 columns */
+    gap: 10px; /* slightly smaller gap on mobile */
+  }
+
+  /* Adjust forecast card padding and size */
+  .forecast-card {
+    padding: 15px; /* reduce padding for smaller screens */
+    border-radius: 12px; /* slightly smaller radius */
+  }
+
+  /* Adjust font sizes for readability */
+  .forecast-card h4,
+  .forecast-day {
+    font-size: 1rem; /* smaller day name */
+  }
+
+  .forecast-card .temperature {
+    font-size: 1.5rem; /* slightly smaller temperature */
+  }
+
+  .forecast-card .description {
+    font-size: 0.85rem; /* smaller description */
+  }
+
+  .forecast-card .icon {
+    width: 50px;
+    height: 50px; /* slightly smaller icons */
+  }
+}
+
