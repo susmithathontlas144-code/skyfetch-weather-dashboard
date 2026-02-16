@@ -84,3 +84,109 @@ h1 {
     width: 100px;
     height: 100px;
 }
+
+.search-section{
+    margin-bottom:30px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    width:100%;
+    max-width:800px;
+}
+
+/* Input */
+#city-input{
+    padding:12px 20px;
+    border-radius:25px;
+    border:2px solid #ddd;
+    flex:1;
+    font-size:1rem;
+    outline:none;
+    transition: border-color .18s ease, box-shadow .18s ease;
+    background:#fff;
+}
+
+/* Input focus */
+#city-input:focus{
+    border-color:var(--primary-color,#3b82f6);
+    box-shadow:0 0 0 6px rgba(59,130,246,0.08);
+}
+
+/* Button */
+#search-btn{
+    padding:12px 30px;
+    background:linear-gradient(135deg,#3b82f6,#6366f1);
+    color:#fff;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+    transition:transform .12s ease,opacity .12s ease,box-shadow .12s ease;
+}
+
+/* Button hover / active */
+#search-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 22px rgba(99,102,241,0.18);
+}
+#search-btn:active{
+    transform:translateY(0);
+    opacity:0.95;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width:600px){
+    .search-section{
+        flex-direction:column;
+        gap:10px;
+    }
+    #search-btn{
+        width:100%;
+    }
+}
+
+.error-message {
+  background-color: #ffe6e6; /* light red/pink background */
+  color: #b30000;            /* dark red text */
+  padding: 12px 16px;        /* some space inside */
+  border-radius: 6px;        /* rounded corners */
+  border-left: 6px solid #b30000; /* thick red left border */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+}
+
+/* Optional: Add an error icon/emoji */
+.error-message::before {
+  content: "⚠️"; /* warning emoji */
+  font-size: 1.2em;
+}
+
+/* Spinner styling */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;       /* light grey border */
+  border-top: 5px solid #667eea;    /* blue accent for spinning effect */
+  border-radius: 50%;               /* makes it circular */
+  animation: spin 1s linear infinite; /* apply rotation animation */
+}
+
+/* Spin keyframes */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Loading container styling */
+.loading-container {
+  display: flex;
+  flex-direction: column;      /* stack spinner and text vertically */
+  align-items: center;         /* center horizontally */
+  justify-content: center;     /* center vertically */
+  height: 100vh;               /* full viewport height */
+  gap: 12px;                   /* space between spinner and text */
+  font-family: sans-serif;
+  color: #333;
+}
